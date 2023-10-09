@@ -8,6 +8,7 @@ specifiers:
   '@types/node': ^20.4.4
   '@types/reveal.js': ^4.4.2
   autoprefixer: ^10.4.14
+  iconify-icon: ^1.0.8
   postcss: ^8.4.27
   postcss-load-config: ^4.0.1
   prettier: ^3.0.0
@@ -24,6 +25,7 @@ specifiers:
 dependencies:
   '@fontsource-variable/jetbrains-mono': 5.0.15
   '@fontsource-variable/manrope': 5.0.14
+  iconify-icon: 1.0.8
   reveal.js: 4.6.1
 
 devDependencies:
@@ -263,6 +265,10 @@ packages:
 
   /@fontsource-variable/manrope/5.0.14:
     resolution: {integrity: sha512-9Ocqy5lRhrfPSQZaSyhQWfNnPOO/0kiLsSu3Q/2+d3z7HhjTASdMeZb69SI2P+zI702/FS5vcPYfFHYuZT9yFA==}
+    dev: false
+
+  /@iconify/types/2.0.0:
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
     dev: false
 
   /@jridgewell/gen-mapping/0.3.3:
@@ -690,6 +696,12 @@ packages:
     resolution: {integrity: sha512-qdSAmqLF6209RFj4VVItywPMbm3vWylknmB3nvNiUIs72xAimcM8nVYxYr7ncvZq5qzk9MKIZR8ijqD/1QuYjQ==}
     engines: {node: '>= 0.4.0'}
     dev: true
+
+  /iconify-icon/1.0.8:
+    resolution: {integrity: sha512-jvbUKHXf8EnGGArmhlP2IG8VqQLFFyTvTqb9LVL2TKTh7/eCCD1o2HHE9thpbJJb6B8hzhcFb6rOKhvo7reNKA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
 
   /import-fresh/3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
