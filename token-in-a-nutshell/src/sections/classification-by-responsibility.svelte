@@ -7,11 +7,11 @@
 		<h1 class="font-mono text-4xl">classification - by responsibility</h1>
 	</Slide>
 	<Slide animate>
-		<div>
-			<Step fadeIn><code>access_token</code></Step>
-			<Step fadeIn><code>refresh_token</code></Step>
-			<Step fadeIn><code>id_token</code></Step>
-		</div>
+		<h1 class="font-mono text-4xl">classification - by responsibility</h1>
+		<div class="h-[24px]"></div>
+		<Step fadeIn><code>access_token</code></Step>
+		<Step fadeIn><code>refresh_token</code></Step>
+		<Step fadeIn><code>id_token</code></Step>
 	</Slide>
 	<Slide>
 		<code>access_token</code>

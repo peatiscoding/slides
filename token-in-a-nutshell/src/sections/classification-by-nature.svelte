@@ -8,7 +8,9 @@
 		<h1 class="font-mono text-4xl">classification - by nature</h1>
 	</Slide>
 	<Slide animate>
-		<Step fadeIn><code data-id="opqt">opaque token</code></Step>
+		<h1 class="font-mono text-4xl">classification - by nature</h1>
+		<div class="h-[24px]"></div>
+		<Step><code data-id="opqt">opaque token</code></Step>
 		<Step fadeIn><code data-id="stlt">stateless token</code></Step>
 		<Notes>
 			<p>
@@ -42,6 +44,7 @@
 		</Notes>
 	</Slide>
 	<Slide animate>
+		<h1 class="font-mono text-3xl mb-5">Comparison</h1>
 		<table class="font-mono text-2xl table-auto">
 			<thead>
 				<tr>
