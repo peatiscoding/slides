@@ -38,6 +38,12 @@
 		</div>
 	</Slide>
 	<Slide>
+		<h1 class="font-mono text-2xl">overview</h1>
+		<div class="flex justify-center items-center">
+			<img src="assets/overview-1.svg" alt="overview of tokens"/>
+		</div>
+	</Slide>
+	<Slide>
 		<code>id_token</code>
 		<Step class="m-3 text-3xl">
 			the proof of <span class="underline"

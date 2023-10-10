@@ -31,6 +31,8 @@
 			{`
 			- https://thenewstack.io/the-different-token-types-and-formats-explained/
 			- https://dev.to/techschoolguru/why-paseto-is-better-than-jwt-for-token-based-authentication-1b0c
+			- https://auth0.com/blog/id-token-access-token-what-is-the-difference/
+			- https://auth0.com/blog/identity-unlocked-explained-episode-1/
 			`}
 		</Code>
 	</Slide>

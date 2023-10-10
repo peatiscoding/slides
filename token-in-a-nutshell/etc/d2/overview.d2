@@ -1,0 +1,70 @@
+direction: right
+rs: {
+  label: Resource Server
+  style: {
+    3d: true
+  }
+}
+
+authSv: {
+  az: {
+    label: Authorization Server
+    style: {
+      3d: true
+    }
+  }
+
+  idp: {
+    label: Identity Provider
+    style: {
+      3d: true
+    }
+  }
+}
+
+user: {
+  label: User
+  shape: person
+  style: {
+    font-color: 'white'
+  }
+}
+
+client: {
+  label: Client App
+}
+
+id_token: {
+  shape: page
+}
+
+access_token: {
+  shape: page
+}
+
+user -> authSv.az -> access_token: {
+  style: {
+    stroke: 'white'
+    font-color: 'white'
+  }
+}
+user -> authSv.idp -> id_token: {
+  style: {
+    stroke: 'white'
+    font-color: 'white'
+  }
+}
+
+access_token -> client -> rs: Access resource {
+  style: {
+    stroke: 'red'
+    font-color: 'white'
+  }
+}
+id_token -> client: identity info {
+  style: {
+    stroke: 'white'
+    font-color: 'white'
+  }
+}
+
