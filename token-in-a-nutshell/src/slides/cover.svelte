@@ -10,7 +10,7 @@ export let highlights: string
 		# Agenda
 
 		- intro. what's token? 
-		- classification. type of tokens.
+		- classification. types of token.
 		- usage. how and when to use it.
 		- deep dive. stateless token.
 		- talk. question & answer.
