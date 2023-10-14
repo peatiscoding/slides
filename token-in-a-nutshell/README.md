@@ -21,3 +21,9 @@ Build and preview deploy.
 ```sh
 pnpm run build && pnpm run preview
 ```
+
+Deploy using wrangler (to cloudflare's page.dev)
+
+```sh
+pnpm run deploy
+```

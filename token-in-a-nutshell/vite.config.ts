@@ -8,8 +8,8 @@ export default defineConfig({
 	plugins: [
 		svelte(),
 		svelteSVG({
-      svgoConfig: {}, // See https://github.com/svg/svgo#configuration
-      requireSuffix: true, // Set false to accept '.svg' without the '?component'
+			svgoConfig: {}, // See https://github.com/svg/svgo#configuration
+			requireSuffix: true, // Set false to accept '.svg' without the '?component'
 		}),
 	],
 	resolve: {

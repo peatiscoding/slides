@@ -2,6 +2,8 @@
 
 	import 'iconify-icon'
 	import { Notes, Slide, Step } from '@components'
+	import readerImageUrl from '../../assets/reader.webp?url'
+	import fbiBadgeImageUrl from '../../assets/fbi-badge.jpg?url'
 </script>
 
 <section>
@@ -108,7 +110,7 @@
 	<Slide animate>
 		<div class="flex justify-center items-center">
 			<Step class="w-1/2 p-3 mx-auto">
-				<img src="/assets/reader.webp" class="" alt="stateful token" />
+				<img src={readerImageUrl} class="" alt="stateful token" />
 				<Step><code class="text-2xl p-3 mx-auto">opaque token</code></Step>
 			</Step>
 		</div>
@@ -129,7 +131,7 @@
 	<Slide>
 		<div class="flex justify-center items-center">
 			<Step class="w-1/2 p-3 mx-auto">
-				<img src="/assets/fbi-badge.jpg" class="" alt="stateless token" />
+				<img src={fbiBadgeImageUrl} class="" alt="stateless token" />
 				<Step><code class="text-2xl p-3 mx-auto">stateless token</code></Step>
 			</Step>
 		</div>
