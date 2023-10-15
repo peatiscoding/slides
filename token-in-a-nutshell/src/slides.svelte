@@ -16,7 +16,6 @@
 		<p class="font-mono text-grey mt-3"><small>By Kittiphat S</small></p>
 	</Slide>
 	<CoverSlide highlights="|3|4|5|6|7" />
-	<CoverSlide highlights="3" />
 	<!-- Imagine getting into a building -->
 	<IntroSection />
 	<!-- Let's see its responsibility (id_token, access_token, refresh_token) -->

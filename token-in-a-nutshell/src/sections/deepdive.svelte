@@ -5,11 +5,8 @@
 <section>
 	<Slide animate>
 		<h1 class="font-mono text-4xl">deepdive - stateless token</h1>
-		<div class="h-[24px]"></div>
-		<code>
-			<Step fadeIn>JWT</Step>
-			<Step fadeIn>/ PASETO</Step>
-		</code>
+	</Slide>
+	<Slide animate>
 		<Code lang="markdown" class="mt-5" lines="">
 			{`
 			# Goals
@@ -28,5 +25,11 @@
 			- PASETO!
 			`}
 		</Code>
+	</Slide>
+	<Slide>
+		<code>
+			<Step>JWT</Step>
+			<Step fadeIn>/ PASETO</Step>
+		</code>
 	</Slide>
 </section>
