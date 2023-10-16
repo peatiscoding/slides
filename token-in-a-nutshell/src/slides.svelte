@@ -9,11 +9,13 @@
 
 <Presentation>
 	<Slide animate>
-		<h1 class="font-mono text-5xl">Token in Nutshell</h1>
+		<h1 class="font-mono text-5xl">Token in a Nutshell</h1>
 	</Slide>
 	<Slide animate>
-		<h1 class="font-mono text-4xl">Token in Nutshell</h1>
-		<p class="font-mono text-grey mt-3"><small>By Kittiphat S</small></p>
+		<h1 class="font-mono text-4xl mb-[50px]">Token in a Nutshell</h1>
+		<iconify-icon icon="line-md:github-loop" />
+		<br/>
+		<a class="underline underline-offset-7 font-mono text-xl" href="https://peatiscoding.github.io/">@peatiscoding</a>
 	</Slide>
 	<CoverSlide highlights="|3|4|5|6|7" />
 	<!-- Imagine getting into a building -->

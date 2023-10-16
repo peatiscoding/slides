@@ -1,24 +1,16 @@
 <script>
 	import 'iconify-icon'
-	import { Code, Notes, Slide } from "@components"
+	import { Code, Slide } from "@components"
 
 </script>
 <section>
 	<!-- Imagine getting into a building -->
 	<Slide animate>
-		<h1 class="font-mono text-4xl">about me.</h1>
-		<div class="h-[80px]"></div>
-
-		<p class="text-2xl mt-5">
-			<iconify-icon icon="line-md:github-loop" />
-			<br/>
-			<a class="underline underline-offset-7 font-mono text-lg" href="https://peatiscoding.github.io/">@peatiscoding</a>
-		</p>
-		<Notes>
-			i'm kittiphat s. CTO at Muze Innovation.
-
-			I'm not a expert in Security, Nor the Cryptography expert my background is plain developer.
-		</Notes>
+		<div class="flex justify-center items-center">
+			<div data-id="intro-panel" class="w-1/2">
+				<span class="font-mono text-4xl">intro. what's token?</span>
+			</div>
+		</div>
 	</Slide>
 	<Slide animate>
 		<div class="p-7">

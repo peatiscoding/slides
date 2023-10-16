@@ -8,10 +8,15 @@
 
 <section>
 	<Slide animate>
-		<h1 class="font-mono text-4xl mb-5">classifications</h1>
+		<h1 class="font-mono text-4xl mb-5">classification. type of tokens.</h1>
+	</Slide>
+	<Slide animate>
+		<h1 class="font-mono text-4xl mb-5">classification. type of tokens.</h1>
 		<div class="flex justify-center items-center">
-			<Step class="font-mono text-2xl p-5">by responsibility<br/><span class="text-lg">(function)</span></Step>
-			<Step fadeIn class="font-mono text-2xl p-5">by nature<br/><span class="text-lg">(format)</span></Step>
+			<p class="font-mono text-3xl p-5">by responsibility<br/><span class="text-xl">(function)</span></p>
+		</div>
+		<div class="flex justify-center items-center">
+			<Step fadeIn class="font-mono text-3xl p-5">by nature<br/><span class="text-xl">(format)</span></Step>
 		</div>
 	</Slide>
 	<Slide animate>
@@ -23,6 +28,25 @@
 		<Step fadeIn><code>access_token</code></Step>
 		<Step fadeIn><code>refresh_token</code></Step>
 		<Step fadeIn><code>id_token</code></Step>
+	</Slide>
+	<Slide>
+		<div class="flex justify-center items-center">
+			<Step order="1" class="flex flex-col justify-center items-center bg-indigo-500 rounded-xl p-8">
+				<iconify-icon icon="ri:account-circle-fill" width="64" />
+				<span class="font-mono text-4xl m-2">authentication</span>
+			</Step>
+			<Step order="3" class="w-[120px]">
+				<iconify-icon icon="ic:round-not-equal" width="64" />
+			</Step>
+			<Step order="2" class="flex flex-col justify-center items-center bg-orange-500 rounded-xl p-8">
+				<iconify-icon icon="ri:checkbox-circle-line" width="64" />
+				<span class="font-mono text-4xl m-2">authorization</span>
+			</Step>
+		</div>
+		<Notes>
+			these 2 basic important concepts.
+			authen is not equates authorization
+		</Notes>
 	</Slide>
 	<Slide>
 		<code>id_token</code>
@@ -61,7 +85,7 @@
 	</Slide>
 	<Slide>
 		<div class="flex justify-center items-center">
-			<Step order="1" class="flex flex-col justify-center items-center">
+			<div class="flex flex-col justify-center items-center bg-indigo-500 rounded-xl p-8">
 				<iconify-icon icon="ri:account-circle-fill" width="64" />
 				<span class="font-mono text-4xl m-2">authentication</span>
 				<Step order="3" class="font-mono text-2xl m-2 mt-[60px]">identity provider</Step>
@@ -69,9 +93,9 @@
 					<iconify-icon icon="ri:arrow-down-line" class="mt-3" style="color: #ccc;" />
 					<code class="font-mono text-2xl m-2">id_token</code>
 				</Step>
-			</Step>
-			<Step order="2" class="w-[70px]"></Step>
-			<Step order="2" class="flex flex-col justify-center items-center">
+			</div>
+			<div class="w-[70px]"></div>
+			<div class="flex flex-col justify-center items-center bg-orange-500 rounded-xl p-8">
 				<iconify-icon icon="ri:checkbox-circle-line" width="64" />
 				<span class="font-mono text-4xl m-2">authorization</span>
 				<Step order="4" class="font-mono text-2xl m-2 mt-[60px]">auth server</Step>
@@ -79,7 +103,7 @@
 					<iconify-icon icon="ri:arrow-down-line" class="mt-3" style="color: #ccc;" />
 					<code class="font-mono text-2xl m-2">access_token</code>
 				</Step>
-			</Step>
+			</div>
 		</div>
 	</Slide>
 	<Slide>
