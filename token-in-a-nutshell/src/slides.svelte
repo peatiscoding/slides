@@ -33,6 +33,7 @@
 			- https://auth0.com/blog/id-token-access-token-what-is-the-difference/
 			- https://auth0.com/blog/identity-unlocked-explained-episode-1/
 			- https://developer.okta.com/blog/2019/10/17/a-thorough-introduction-to-paseto
+			- https://www.scottbrady91.com/jose/jwts-which-signing-algorithm-should-i-use
 			`}
 		</Code>
 	</Slide>
