@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Presentation, Slide, Code } from '@components'
+	import { Presentation, Slide, Code, Notes } from '@components'
 	import CoverSlide from './slides/cover.svelte'
 	import IntroSection from './sections/intro.svelte'
 	import Classification from './sections/classification.svelte'
@@ -16,6 +16,12 @@
 		<iconify-icon icon="line-md:github-loop" />
 		<br/>
 		<a class="underline underline-offset-7 font-mono text-xl" href="https://peatiscoding.github.io/">@peatiscoding</a>
+		<Notes>
+			- not a cryptographer
+			- not a security expert
+			- just a regular programmer that happens to work on these type of projects for quite sometime
+			- sharing what i know
+		</Notes>
 	</Slide>
 	<CoverSlide highlights="|3|4|5|6|7" />
 	<!-- Imagine getting into a building -->

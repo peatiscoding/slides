@@ -55,14 +55,16 @@
 		</div>
 	</Slide>
 	<Slide animate>
-		<Code lang="markdown" class="mt-5" lines="|3|4|5|6">
+		<Code lang="markdown" class="mt-5" lines="|3|4|5|6,7,8">
 			{`
 			# Goals
 
-			- understanding. differences between *Access* vs *Identity*.
+			- understanding. differences between _access_ vs _identity_.
 			- secure. promote the system's design to be more secure. 
 			- robust. system design should, well, be ... robust.
-			- look ahead. the emerging concept _sender constraints_,
+			- look ahead. the emerging concepts, tools
+				* _sender constraints_,
+				* _paseto_,
 			`}
 		</Code>
 	</Slide>

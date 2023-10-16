@@ -49,6 +49,22 @@
 		</Notes>
 	</Slide>
 	<Slide>
+		<code>access_token</code>
+		<Step class="m-3 text-3xl"
+			>the proof of <span class="underline underline-offset-3"
+				>authorization</span
+			>
+			of <span class="underline underline-offset-3">the bearer.</span></Step
+		>
+		<Notes>
+			<p>
+				Note the key word, "Accessilbiltiy" of the Bearer. So let's examine this
+				wording a bit. "To access" - accessing what? - by whom is not the
+				concern here.
+			</p>
+		</Notes>
+	</Slide>
+	<Slide>
 		<code>id_token</code>
 		<Step class="m-3 text-3xl">
 			the proof of <span class="underline"
@@ -64,22 +80,6 @@
 			</p>
 			<p>
 				An ID token is an artifact that proves that the user has been authenticated. It was introduced by OpenID Connect (OIDC), an open standard for authentication used by many identity providers such as Google, Facebook, and, of course, Auth0. Check out this document for more details on OpenID Connect. Let's take a quick look at the problem OIDC wants to resolve.
-			</p>
-		</Notes>
-	</Slide>
-	<Slide>
-		<code>access_token</code>
-		<Step class="m-3 text-3xl"
-			>the proof of <span class="underline underline-offset-3"
-				>authorization</span
-			>
-			of <span class="underline underline-offset-3">the bearer.</span></Step
-		>
-		<Notes>
-			<p>
-				Note the key word, "Accessilbiltiy" of the Bearer. So let's examine this
-				wording a bit. "To access" - accessing what? - by whom is not the
-				concern here.
 			</p>
 		</Notes>
 	</Slide>
