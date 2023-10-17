@@ -4,21 +4,23 @@
 </script>
 <section>
 	<Slide animate>
-		<h1 class="font-mono text-4xl">deepdive - stateless token</h1>
+		<h1 data-id="dasdjasdf" class="font-mono text-4xl">deepdive. stateless token.</h1>
+	</Slide>
+	<Slide>
+		<Step order="1"><code>JWT</code></Step>
+		<Step order="2" fadeInOut><code>PASETO</code></Step>
 	</Slide>
 	<Slide animate>
-		JWT 101 - anatomy
-		<Step>
-			<code class="text-center text-2xl mt-5">
-				{'<header>.<body>.<signature>'}
-			</code>
-		</Step>
+		<h1 data-id="as;kjdfad" class="font-mono text-4xl">JWT 101 - anatomy</h1>
+		<code class="text-center text-2xl mt-5">
+			{'<header>.<body>.<signature>'}
+		</code>
 		<Step>
 			<p class="font-mono text-lg mt-3">JWT carries information (state) hence server can be "stateless"</p>
 		</Step>
 	</Slide>
 	<Slide animate>
-		<h1 class="font-mono text-2xl">Header</h1>
+		<h1 class="font-mono">Header</h1>
 		<Code lang="json">
 			{`
 			{
@@ -33,7 +35,7 @@
 		</Notes>
 	</Slide>
 	<Slide animate>
-		<h1 class="font-mono text-2xl">Header</h1>
+		<h1 class="font-mono">Header</h1>
 		<Code lang="json">
 			{`
 			{
@@ -50,7 +52,7 @@
 		</Notes>
 	</Slide>
 	<Slide animate>
-		<h1 class="font-mono text-2xl">Header</h1>
+		<h1 class="font-mono">Header</h1>
 		<Code lang="json" lines="2">
 			{`
 			{
@@ -63,6 +65,72 @@
 			"alg" also supports "none" value. This is completely valid JWT class and
 			it will went through if your code doesn't validate the supported algorithms.
 		</Notes>
+	</Slide>
+	<Slide>
+		<h1 class="font-mono">Payload</h1>
+		<Code lang="json" lines="|3,4,5,6">
+			{`
+			{
+				"sub": "subject", // unique principal of this token
+				"iss": "https://securetoken.google.com/<firebase-prj-key>",
+				"aud": "<firebae-prj-key>" // expected consumer of this token
+				"iat": "<issued_at>",
+				"exp": "<expired_at>"
+			}
+			`}
+		</Code>
+		<Notes>
+			along with supported algorithm should be added; it is important to validate
+
+			- issuer
+			- audience
+			- iat
+			- exp
+		</Notes>
+	</Slide>
+	<Slide>
+		<h1 class="font-mono">Signature</h1>
+		<Code lang="typescript">
+			{`
+				sign(alg, ascii(base64url(header) + '.' + base64url(payload)))
+			`}
+		</Code>
+	</Slide>
+	<Slide animate>
+		<span data-id="algo" class="font-mono">Algorithm</span>
+		<div data-id="algo-panel" class="w-1/2 h-full m-auto my-5">
+			<div class="flex flex-row justify-center items-center gap-5">
+				<div data-id="pfx" class="font-mono bg-indigo-400 rounded-l-xl p-5">signing</div>
+				<div class="font-mono bg-orange-500 rounded-r-xl p-5">hashing</div>
+			</div>
+		</div>
+	</Slide>
+	<Slide animate>
+		<span data-id="algo" class="font-mono">Algorithm</span>
+		<div data-id="algo-panel" class="w-1/2 h-full m-auto my-5">
+			<div class="flex flex-row justify-center items-center gap-5">
+				<div data-id="pfx" class="font-mono bg-indigo-400 rounded-l-xl p-5">RS</div>
+				<div data-id="hash-std" class="font-mono bg-orange-500 rounded-r-xl p-5">256</div>
+			</div>
+		</div>
+	</Slide>
+	<Slide animate>
+		<span data-id="algo" class="font-mono">Algorithm</span>
+		<div data-id="algo-panel" class="w-1/2 h-full m-auto my-5">
+			<div class="flex flex-row justify-center items-center gap-5">
+				<div data-id="pfx" class="font-mono bg-indigo-400 rounded-l-xl p-5">PS</div>
+				<div data-id="hash-std" class="font-mono bg-orange-500 rounded-r-xl p-5">256</div>
+			</div>
+		</div>
+	</Slide>
+	<Slide animate>
+		<span data-id="algo" class="font-mono">Algorithm</span>
+		<div data-id="algo-panel" class="w-1/2 h-full m-auto my-5">
+			<div class="flex flex-row justify-center items-center gap-5">
+				<div data-id="pfx" class="font-mono bg-indigo-400 rounded-l-xl p-5">ES</div>
+				<div data-id="hash-std" class="font-mono bg-orange-500 rounded-r-xl p-5">256</div>
+			</div>
+		</div>
 	</Slide>
 	<Slide animate>
 		<Code lang="markdown" class="mt-5" lines="">
@@ -83,11 +151,5 @@
 			- PASETO!
 			`}
 		</Code>
-	</Slide>
-	<Slide>
-		<code>
-			<Step>JWT</Step>
-			<Step fadeIn>/ PASETO</Step>
-		</code>
 	</Slide>
 </section>

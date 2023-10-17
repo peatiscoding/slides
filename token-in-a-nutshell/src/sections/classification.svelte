@@ -1,5 +1,4 @@
 <script>
-
 	import 'iconify-icon'
 	import { Notes, Slide, Step } from '@components'
 	import readerImageUrl from '../../assets/reader.webp?url'
