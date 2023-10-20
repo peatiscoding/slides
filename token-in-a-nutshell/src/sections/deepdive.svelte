@@ -97,40 +97,44 @@
 		</Code>
 	</Slide>
 	<Slide animate>
-		<span data-id="algo" class="font-mono">Algorithm</span>
+		<span data-id="algo" class="font-mono">algorithm</span>
 		<div data-id="algo-panel" class="w-1/2 h-full m-auto my-5">
 			<div class="flex flex-row justify-center items-center gap-5">
 				<div data-id="pfx" class="font-mono bg-indigo-400 rounded-l-xl p-5">signing</div>
 				<div class="font-mono bg-orange-500 rounded-r-xl p-5">hashing</div>
 			</div>
 		</div>
+		<span class="font-mono text-2xl mt-8">&nbsp;</span>
 	</Slide>
 	<Slide animate>
-		<span data-id="algo" class="font-mono">Algorithm</span>
+		<span data-id="algo" class="font-mono">algorithm</span>
 		<div data-id="algo-panel" class="w-1/2 h-full m-auto my-5">
 			<div class="flex flex-row justify-center items-center gap-5">
 				<div data-id="pfx" class="font-mono bg-indigo-400 rounded-l-xl p-5">RS</div>
 				<div data-id="hash-std" class="font-mono bg-orange-500 rounded-r-xl p-5">256</div>
 			</div>
 		</div>
+		<span class="font-mono text-2xl mt-8">Scary Version: RSASSA-PKCS-v1_5 Signature with SHA-256</span>
 	</Slide>
 	<Slide animate>
-		<span data-id="algo" class="font-mono">Algorithm</span>
+		<span data-id="algo" class="font-mono">algorithm</span>
 		<div data-id="algo-panel" class="w-1/2 h-full m-auto my-5">
 			<div class="flex flex-row justify-center items-center gap-5">
 				<div data-id="pfx" class="font-mono bg-indigo-400 rounded-l-xl p-5">PS</div>
 				<div data-id="hash-std" class="font-mono bg-orange-500 rounded-r-xl p-5">256</div>
 			</div>
 		</div>
+		<span class="font-mono text-2xl mt-8">Scary Version: RSASSA-PSS Signature with SHA-256</span>
 	</Slide>
 	<Slide animate>
-		<span data-id="algo" class="font-mono">Algorithm</span>
+		<span data-id="algo" class="font-mono">algorithm</span>
 		<div data-id="algo-panel" class="w-1/2 h-full m-auto my-5">
 			<div class="flex flex-row justify-center items-center gap-5">
 				<div data-id="pfx" class="font-mono bg-indigo-400 rounded-l-xl p-5">ES</div>
 				<div data-id="hash-std" class="font-mono bg-orange-500 rounded-r-xl p-5">256</div>
 			</div>
 		</div>
+		<span class="font-mono text-2xl mt-8">Scary Version: ECDSA Signature with P-256 (prime256v1)</span>
 	</Slide>
 	<Slide animate>
 		<Code lang="markdown" class="mt-5" lines="">
