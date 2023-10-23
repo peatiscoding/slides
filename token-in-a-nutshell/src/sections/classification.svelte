@@ -27,22 +27,36 @@
 		<Step fadeIn><code>access_token</code></Step>
 		<Step fadeIn><code>refresh_token</code></Step>
 		<Step fadeIn><code>id_token</code></Step>
+		<Notes>
+			<p>To get to know these 3 types of tokens we first must understand "auth" concept first</p>
+		</Notes>
+	</Slide>
+	<Slide animate>
+		<h1 class="font-mono text-4xl">auth</h1>
+		<Notes>
+			<p>let's understand the very important concepts of "Auth" first.</p>
+
+			these 2 basic important concepts.
+			authen is not equates authorization
+		</Notes>
 	</Slide>
 	<Slide>
 		<div class="flex justify-center items-center">
-			<Step order="1" class="flex flex-col justify-center items-center bg-indigo-500 rounded-xl p-8">
+			<div class="flex flex-col justify-center items-center bg-indigo-500 rounded-xl p-8">
 				<iconify-icon icon="ri:account-circle-fill" width="64" />
-				<span class="font-mono text-4xl m-2">authentication</span>
-			</Step>
-			<Step order="3" class="w-[120px]">
+				<span class="font-mono text-4xl m-2"><span class="underline">auth</span>entication</span>
+			</div>
+			<Step order="2" class="w-[120px]">
 				<iconify-icon icon="ic:round-not-equal" width="64" />
 			</Step>
-			<Step order="2" class="flex flex-col justify-center items-center bg-orange-500 rounded-xl p-8">
+			<div class="flex flex-col justify-center items-center bg-orange-500 rounded-xl p-8">
 				<iconify-icon icon="ri:checkbox-circle-line" width="64" />
-				<span class="font-mono text-4xl m-2">authorization</span>
-			</Step>
+				<span class="font-mono text-4xl m-2"><span class="underline">auth</span>orization</span>
+			</div>
 		</div>
 		<Notes>
+			<p>let's understand the very important concepts of "Auth" first.</p>
+
 			these 2 basic important concepts.
 			authen is not equates authorization
 		</Notes>
@@ -92,6 +106,7 @@
 					<iconify-icon icon="ri:arrow-down-line" class="mt-3" style="color: #ccc;" />
 					<code class="font-mono text-2xl m-2">id_token</code>
 				</Step>
+				<Step fadeDown order="7" class="font-mono text-xl mt-[25px]">has identity</Step>
 			</div>
 			<div class="w-[70px]"></div>
 			<div class="flex flex-col justify-center items-center bg-orange-500 rounded-xl p-8">
@@ -102,6 +117,7 @@
 					<iconify-icon icon="ri:arrow-down-line" class="mt-3" style="color: #ccc;" />
 					<code class="font-mono text-2xl m-2">access_token</code>
 				</Step>
+				<Step fadeDown order="8" class="font-mono text-xl mt-[25px]">has scope</Step>
 			</div>
 		</div>
 	</Slide>

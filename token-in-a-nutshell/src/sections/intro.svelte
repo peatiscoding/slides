@@ -4,6 +4,34 @@
 
 </script>
 <section>
+	<Slide animate>
+		<Code lang="markdown">
+			{`
+			# Goals
+
+			- differences between _access_ vs _identity_.
+			- differences between _stateful_ vs _stateless_.
+			- our current toolbox.
+			- how to utilize them.
+			- look ahead. the emerging concepts & tools
+				* _sender constraints_,
+				* _paseto_,
+			`}
+		</Code>
+	</Slide>
+	<Slide animate>
+		<Code lang="markdown" lines="|3|4|5|6|7">
+			{`
+			# Agenda
+
+			- intro. what's token? 
+			- classification. types of token.
+			- usage. how and when to use it.
+			- deep dive. stateless token.
+			- talk. question & answer.
+				`}
+		</Code>
+	</Slide>
 	<!-- Imagine getting into a building -->
 	<Slide animate>
 		<div class="flex justify-center items-center">
@@ -53,19 +81,5 @@
 			<h2 class="font-mono text-left text-xl mt-2">/ˈtōk(ə)n/</h2>
 			<p class="font-serif text-left text-xl mt-5"><span data-id="d">a thing serving as a visible or tangible representation of</span> <span data-id="a" class="underline underline-offset-4">the access rights</span></p>
 		</div>
-	</Slide>
-	<Slide animate>
-		<Code lang="markdown" class="mt-5" lines="|3|4|5|6,7,8">
-			{`
-			# Goals
-
-			- understanding. differences between _access_ vs _identity_.
-			- secure. promote the system's design to be more secure. 
-			- robust. system design should, well, be ... robust.
-			- look ahead. the emerging concepts, tools
-				* _sender constraints_,
-				* _paseto_,
-			`}
-		</Code>
 	</Slide>
 </section>

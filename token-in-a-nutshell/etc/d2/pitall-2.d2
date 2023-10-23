@@ -1,12 +1,23 @@
 direction: right
-rs: {
-  label: Resource Server
-  style: {
-    3d: true
+
+app: {
+  client: {
+    label: Client App
+  }
+
+  service: {
+    label: App Service
+  }
+
+  client -> service: {
+    style: {
+      stroke: 'orange'
+    }
   }
 }
 
 authSv: {
+  label: Auth Service
   az: {
     label: Authorization Server
     style: {
@@ -20,6 +31,13 @@ authSv: {
       3d: true
     }
   }
+
+  rs: {
+    label: Resource Server\nOther Service
+    style: {
+      3d: true
+    }
+  }
 }
 
 user: {
@@ -28,10 +46,6 @@ user: {
   style: {
     font-color: 'white'
   }
-}
-
-client: {
-  label: Client App
 }
 
 id_token: {
@@ -55,13 +69,13 @@ user -> authSv.idp -> id_token: {
   }
 }
 
-access_token -> client -> rs: Access resource {
+access_token -> app.client -> authSv.rs: Access resource {
   style: {
     stroke: 'red'
     font-color: 'white'
   }
 }
-id_token -> client: identity info {
+id_token -> app.client: identity info {
   style: {
     stroke: 'white'
     font-color: 'white'

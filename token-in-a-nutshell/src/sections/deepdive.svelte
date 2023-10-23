@@ -9,6 +9,42 @@
 	<Slide>
 		<Step order="1"><code>JWT</code></Step>
 		<Step order="2" fadeInOut><code>PASETO</code></Step>
+		<Notes>
+			<p>currently there are more than just JWT such as PASETO. But nothing is as well known as JWT.</p>
+			<p>And that's the reason why we must really know our JWT really well.</p>
+		</Notes>
+	</Slide>
+	<Slide animate>
+		<h1 data-id="as;kjdfad" class="font-mono text-4xl">JWT 101 - JOSE family</h1>
+		<div class="grid grid-flow-row-dense grid-cols-6 mt-[50px]">
+			<Step fadeDown class="font-mono text-3xl rounded-xl bg-orange-400 m-3 p-4 col-span-6">JOSE Framework</Step>
+			<Step fadeDown class="font-mono text-3xl rounded-xl bg-red-500 m-3 p-4">JWT</Step>
+			<Step fadeDown class="font-mono text-3xl rounded-xl bg-green-500 m-3 p-4">JWE</Step>
+			<Step fadeDown class="font-mono text-3xl rounded-xl bg-teal-500 m-3 p-4">JWS</Step>
+			<Step fadeDown class="font-mono text-3xl rounded-xl bg-blue-500 m-3 p-4">JWK</Step>
+			<Step fadeDown class="font-mono text-3xl rounded-xl bg-indigo-500 m-3 p-4">JWA</Step>
+			<Step fadeDown class="font-mono text-3xl rounded-xl bg-amber-500 m-3 p-4">JWM</Step>
+			<Step fadeDown class="font-mono text-2xl rounded-xl bg-red-300 m-3 p-4">RFC 7519</Step>
+			<Step fadeDown class="font-mono text-2xl rounded-xl bg-green-300 m-3 p-4">RFC 7516</Step>
+			<Step fadeDown class="font-mono text-2xl rounded-xl bg-teal-300 m-3 p-4">RFC 7515</Step>
+			<Step fadeDown class="font-mono text-2xl rounded-xl bg-blue-300 m-3 p-4">RFC 7517</Step>
+			<Step fadeDown class="font-mono text-2xl rounded-xl bg-indigo-300 m-3 p-4">RFC 7518</Step>
+			<Step fadeDown class="font-mono text-2xl rounded-xl bg-amber-300 m-3 p-4">RFC 8259</Step>
+		</div>
+		<Notes>
+			<p>
+				JOSE (JavaScript Object Signing and Encryption) is a framework for securely transmitting information between parties. It contains several standards that cover various use cases:</p>
+			<ol>
+			<li>JWT (JSON Web Token) - An open standard that defines a compact way to securely transmit information as a JSON object. Useful for authorization and information exchange.</li>
+			<li>JWS (JSON Web Signature) - Provides integrity for JWTs by allowing the payload to be digitally signed.</li>
+			<li>JWE (JSON Web Encryption) - Provides confidentiality for JWTs by allowing the payload to be encrypted.</li>
+			<li>JWK (JSON Web Key) - Represents cryptographic keys in a JSON structure. Used for storing and transferring keys.</li>
+			<li>JWA (JSON Web Algorithms) - Lists cryptographic algorithms used by JWT, JWS and JWE.</li>
+			<li>JWM (JSON Web Message) - A compact format to securely transfer messages between parties.</li>
+			<li>JWD (JSON Web Decryption) - The inverse of JWE, describes how to decrypt a JWE-formatted message.</li>
+			<li>JWS Unencoded Payload Option - An extension to transmit unencoded payloads in JWS.</li>
+			</ol>
+		</Notes>
 	</Slide>
 	<Slide animate>
 		<h1 data-id="as;kjdfad" class="font-mono text-4xl">JWT 101 - anatomy</h1>
@@ -110,6 +146,22 @@
 		<span data-id="algo" class="font-mono">algorithm</span>
 		<div data-id="algo-panel" class="w-1/2 h-full m-auto my-5">
 			<div class="flex flex-row justify-center items-center gap-5">
+				<div data-id="pfx" class="font-mono bg-indigo-400 rounded-l-xl p-5">HS</div>
+				<div data-id="hash-std" class="font-mono bg-orange-500 rounded-r-xl p-5">256</div>
+			</div>
+		</div>
+		<span class="font-mono text-2xl mt-8">Scary Version: HMAC Signature with SHA-256</span>
+		<Notes>
+			the symmetric version of encryption meaning the issuer and the validator need to have the same secret
+			doing so means it will need extra care of how to keep the secret in sync. or even how to distribute the secret to another system.
+
+			Consider using other solution beside JWT..
+		</Notes>
+	</Slide>
+	<Slide animate>
+		<span data-id="algo" class="font-mono">algorithm</span>
+		<div data-id="algo-panel" class="w-1/2 h-full m-auto my-5">
+			<div class="flex flex-row justify-center items-center gap-5">
 				<div data-id="pfx" class="font-mono bg-indigo-400 rounded-l-xl p-5">RS</div>
 				<div data-id="hash-std" class="font-mono bg-orange-500 rounded-r-xl p-5">256</div>
 			</div>
@@ -125,6 +177,9 @@
 			</div>
 		</div>
 		<span class="font-mono text-2xl mt-8">Scary Version: RSASSA-PSS Signature with SHA-256</span>
+		<Notes>
+			<p>A better version of RSA one. because it has the probability randomization in it!</p>
+		</Notes>
 	</Slide>
 	<Slide animate>
 		<span data-id="algo" class="font-mono">algorithm</span>
@@ -135,25 +190,20 @@
 			</div>
 		</div>
 		<span class="font-mono text-2xl mt-8">Scary Version: ECDSA Signature with P-256 (prime256v1)</span>
+		<Notes>
+			<p>A version that make uses of the new Eliciptic Curve which is being used to sign to Crypto Token.</p>
+			<p>However this one give a performance bump on signing not validating</p>
+			<p>One obvious benefit is that it is really short. And should be safer after Quantum world</p>
+		</Notes>
 	</Slide>
 	<Slide animate>
-		<Code lang="markdown" class="mt-5" lines="">
-			{`
-			# Goals
-
-			- jose - JSON Object Signing and Encryption
-
-			- security pitfall of JWT
-				- siging with asym and sym keys
-				- claims
-				- validate JWT properly, issuer and audience
-				- kid
-				- JKS
-			- _sender constraints_ the emerging standards.
-				- MTLS
-				- DPoP
-			- PASETO!
-			`}
-		</Code>
+		<span data-id="pasteo" class="font-mono">PASTEO</span>
+	</Slide>
+	<Slide animate>
+		<span data-id="topc" class="font-mono">sender constraint</span>
+		<Notes>
+			- MTLS
+			- DPoP
+		</Notes>
 	</Slide>
 </section>

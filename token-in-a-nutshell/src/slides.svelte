@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Presentation, Slide, Code, Notes } from '@components'
-	import CoverSlide from './slides/cover.svelte'
 	import IntroSection from './sections/intro.svelte'
 	import Classification from './sections/classification.svelte'
 	import Usage from './sections/usage.svelte'
@@ -23,7 +22,6 @@
 			- sharing what i know
 		</Notes>
 	</Slide>
-	<CoverSlide highlights="|3|4|5|6|7" />
 	<!-- Imagine getting into a building -->
 	<IntroSection />
 	<!-- Let's see its responsibility (id_token, access_token, refresh_token) -->
