@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Presentation, Slide, Code, Notes } from '@components'
+	import { Presentation, Slide, Notes } from '@components'
 	import IntroSection from './sections/intro.svelte'
 	import Classification from './sections/classification.svelte'
 	import Usage from './sections/usage.svelte'
@@ -15,7 +15,8 @@
 		<h1 class="font-mono text-4xl mb-[50px]">Token in a Nutshell</h1>
 		<iconify-icon icon="line-md:github-loop" />
 		<br/>
-		<a class="underline underline-offset-7 font-mono text-xl" href="https://peatiscoding.github.io/">@peatiscoding</a>
+		<a class="underline underline-offset-7 font-mono text-xl" href="https://peatiscoding.github.io/" target="_blank">@peatiscoding</a>
+		<p class="font-mono text-sm mt-2">CTO <a class="underline" href="https://muze.co.th" target="_blank">@Muze Innovation</a></p>
 		<Notes>
 			- not a cryptographer
 			- not a security expert
