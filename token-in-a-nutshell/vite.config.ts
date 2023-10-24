@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import svelteSVG from 'vite-plugin-svelte-svg'
+import { VitePluginRadar } from 'vite-plugin-radar'
 import path from 'path'
 
 // https://vitejs.dev/config/
@@ -11,6 +12,11 @@ export default defineConfig({
 			svgoConfig: {}, // See https://github.com/svg/svgo#configuration
 			requireSuffix: true, // Set false to accept '.svg' without the '?component'
 		}),
+		VitePluginRadar({
+			gtm: {
+				id: 'G-5NKJEEWQZ5',
+			},
+		})
 	],
 	resolve: {
 		alias: {

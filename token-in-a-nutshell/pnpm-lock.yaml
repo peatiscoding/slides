@@ -70,6 +70,9 @@ devDependencies:
   vite:
     specifier: ^4.4.6
     version: 4.4.10(@types/node@20.8.2)
+  vite-plugin-radar:
+    specifier: ^0.9.1
+    version: 0.9.1(vite@4.4.10)
   vite-plugin-svelte-svg:
     specifier: ^2.3.0
     version: 2.3.0(svelte@4.2.1)(vite@4.4.10)
@@ -1987,6 +1990,14 @@ packages:
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+    dev: true
+
+  /vite-plugin-radar@0.9.1(vite@4.4.10):
+    resolution: {integrity: sha512-stnb+LxeEKobcesXW2JA0OdCaBRgR/zZwN6ACXZf1gF9MNR689aiK5UlgTVmrpUnEcPucO9U0M0WHnuM6NXPsA==}
+    peerDependencies:
+      vite: ^2.0.0 || ^3.0.0 || ^4.0.0
+    dependencies:
+      vite: 4.4.10(@types/node@20.8.2)
     dev: true
 
   /vite-plugin-svelte-svg@2.3.0(svelte@4.2.1)(vite@4.4.10):
