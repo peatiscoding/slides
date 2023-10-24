@@ -9,10 +9,10 @@
 <section>
 	<Slide animate>
 		<h1 class="font-mono text-3xl p-5">thank you</h1>
-		<h2 class="font-mono text-2xl mt-3">talk. question & answers</h2>
+		<h2 class="font-mono text-2xl mt-3">talk. question & answer.</h2>
 	</Slide>
 	<Slide animate class="text-left">
-		<span class="font-mono text-lg">slides is available at</span>
+		<span class="font-mono text-lg">slides are available at</span>
 		<div class="flex justify-start content-center h-[100px] mt-3">
 			<QrCode value={`https://${slideUrl}`} background="#FFF" class="w-[64px]"/>
 		</div>

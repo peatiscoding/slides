@@ -4,7 +4,7 @@
 </script>
 <section>
 	<Slide animate>
-		<h1 data-id="dasdjasdf" class="font-mono text-4xl">deepdive. stateless token.</h1>
+		<h1 data-id="dasdjasdf" class="font-mono text-4xl">deep dive. stateless token.</h1>
 	</Slide>
 	<Slide>
 		<Step order="1"><code>JWT</code></Step>
@@ -17,7 +17,7 @@
 	<Slide animate>
 		<h1 data-id="as;kjdfad" class="font-mono text-4xl">JWT 101 - JOSE family</h1>
 		<div class="grid grid-flow-row-dense grid-cols-6 mt-[50px]">
-			<Step fadeDown class="font-mono text-3xl rounded-xl bg-orange-400 m-3 p-4 col-span-6">Javascript Object Signing and Encryption</Step>
+			<Step fadeDown class="font-mono text-3xl rounded-xl bg-orange-400 m-3 p-4 col-span-6">JavaScript Object Signing and Encryption</Step>
 			<Step fadeDown class="font-mono text-3xl rounded-xl bg-red-500 m-3 p-4">JWT</Step>
 			<Step fadeDown class="font-mono text-3xl rounded-xl bg-green-500 m-3 p-4">JWE</Step>
 			<Step fadeDown class="font-mono text-3xl rounded-xl bg-teal-500 m-3 p-4">JWS</Step>
@@ -217,7 +217,7 @@
 	</Slide>
 	<Slide animate>
 		<h1 data-id="senderconst" class="font-mono text-4xl">sender constraints</h1>
-		<Step fadeDown class="font-mono text-2xl mt-10">another problem with token based authentication</Step>
+		<Step fadeDown class="font-mono text-2xl mt-10">another problem with token-based authentication</Step>
 		<Step fadeDown class="font-mono text-2xl mt-5">CASE: copy the token then paste it in the Authorization header in postman</Step>
 		<div class="grid grid-flow-row-dense grid-cols-2 mt-[50px]">
 			<Step fadeDown class="font-mono text-3xl rounded-xl bg-orange-500 m-3 p-4">MTLS</Step>

@@ -124,7 +124,7 @@
 	<Slide>
 		<code>refresh_token</code>
 		<Step class="m-3 text-3xl">
-			the token that represent <span class="underline"
+			represents <span class="underline"
 				>the validity of the bearer</span
 			>
 			to hold such: <code>access_token + id_token</code>
@@ -235,7 +235,7 @@
 	</Slide>
 	<Slide>
 		<p class="font-mono text-xl">
-			These 2 concepts are not always binary; in system designs these philosophy of stateful and stateless can be leveraged in many places.
+			These 2 concepts are not always binary; in system designs this philosophy of stateful and stateless can be leveraged in many places.
 		</p>
 		<Notes>
 			Now here is the key takeaway!

@@ -12,7 +12,7 @@
 	<Slide>
 		<h1 data-id="pitfall-1" class="font-mono">common pitfall #1</h1>
 		<p class="font-mono mt-5 text-2xl">
-			decode IdP's access_token for cliams.
+			decode IdP's access_token for claims.
 		</p>
 		<Notes>
 			<p>Even though it access token is a JWT doesn't mean all IdP will use them as such</p>
@@ -31,14 +31,14 @@
 	<Slide animate>
 		<h1 data-id="pitfall-1" class="font-mono">common pitfall #2</h1>
 		<p class="font-mono mt-5 text-2xl">
-			some may endup have the system setup like so.
+			some may end up having the system setup like so.
 		</p>
 			<Pitfall_2_1/>
 	</Slide>
 	<Slide animate>
 		<h1 data-id="pitfall-1" class="font-mono">common pitfall #2</h1>
 		<p class="font-mono mt-5 text-2xl">
-			here is how it is inteded to be used.
+			here is how it is intended to be used.
 		</p>
 			<Pitfall_2_3 />
 	</Slide>
