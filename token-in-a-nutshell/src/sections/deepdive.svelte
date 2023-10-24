@@ -17,7 +17,7 @@
 	<Slide animate>
 		<h1 data-id="as;kjdfad" class="font-mono text-4xl">JWT 101 - JOSE family</h1>
 		<div class="grid grid-flow-row-dense grid-cols-6 mt-[50px]">
-			<Step fadeDown class="font-mono text-3xl rounded-xl bg-orange-400 m-3 p-4 col-span-6">JOSE Framework</Step>
+			<Step fadeDown class="font-mono text-3xl rounded-xl bg-orange-400 m-3 p-4 col-span-6">Javascript Object Signing and Encryption</Step>
 			<Step fadeDown class="font-mono text-3xl rounded-xl bg-red-500 m-3 p-4">JWT</Step>
 			<Step fadeDown class="font-mono text-3xl rounded-xl bg-green-500 m-3 p-4">JWE</Step>
 			<Step fadeDown class="font-mono text-3xl rounded-xl bg-teal-500 m-3 p-4">JWS</Step>
@@ -197,11 +197,34 @@
 		</Notes>
 	</Slide>
 	<Slide animate>
-		<span data-id="pasteo" class="font-mono">PASTEO</span>
+		<h1 data-id="pasteo" class="font-mono text-4xl">PASETO</h1>
+		<p class="font-mono text-2xl mt-3">Platform Agnostic SEcure TOken</p>
+		<Step fadeDown class="font-mono text-xl mt-3">but why?</Step>
+		<Notes>
+			<p>According to multiple cryptographers and security experts JWT is purely not safe. And is leaving a lot of security decision to non-secuirty experts such as Developer. What are these choices? Algorithm, Library that MUST understands the RFC which allow some security choices to developer that uses the library.</p>
+			<p>This basically create a lot of loop holes</p>
+		</Notes>
 	</Slide>
 	<Slide animate>
-		<span data-id="topc" class="font-mono">sender constraint</span>
+		<h1 data-id="pasteo" class="font-mono text-4xl">PASETO 101 - anatomy</h1>
+		<code class="text-center text-2xl mt-5">
+			{'<version>.<\'local\'|\'public\'>.<payload>'}
+		</code>
 		<Notes>
+			<p>We won't go into deeper details with this library as it has a lot more details.</p>
+			<p>However let's highlight the key-differences. Unlike JWT, content of the pasteo are always encrypted. The key important is the encryption suite is never been the choices for Developer. It creates the lesser flexibility however promote the security.</p>
+		</Notes>
+	</Slide>
+	<Slide animate>
+		<h1 data-id="senderconst" class="font-mono text-4xl">sender constraints</h1>
+		<Step fadeDown class="font-mono text-2xl mt-10">another problem with token based authentication</Step>
+		<Step fadeDown class="font-mono text-2xl mt-5">CASE: copy the token then paste it in the Authorization header in postman</Step>
+		<div class="grid grid-flow-row-dense grid-cols-2 mt-[50px]">
+			<Step fadeDown class="font-mono text-3xl rounded-xl bg-orange-500 m-3 p-4">MTLS</Step>
+			<Step fadeDown class="font-mono text-3xl rounded-xl bg-indigo-500 m-3 p-4">DPoP</Step>
+		</div>
+		<Notes>
+			<p>Copy the token paste it in the Auth header in postman</p>
 			- MTLS
 			- DPoP
 		</Notes>
