@@ -3,13 +3,16 @@
 </script>
 <section>
 	<Slide animate>
-		<h1 class="font-mono p-5">Thank you</h1>
-		<h2 class="font-mono mt-3">q & a</h2>
+		<h1 class="font-mono text-3xl p-5">thank you</h1>
+		<h2 class="font-mono text-2xl mt-3">talk. question & answers</h2>
 	</Slide>
 	<Slide animate>
-		<h1 class="font-mono p-5">refs</h1>
-		<Code lang="markdown">
+		<p class="font-mono text-lg">slides is available at</p>
+		<a class="font-mono text-2xl underline" href="//token-in-a-nutshell.pages.dev/">token-in-a-nutshell.pages.dev</a>
+		<Code lang="markdown text-sm mt-10">
 			{`
+			# refs
+
 			- https://thenewstack.io/the-different-token-types-and-formats-explained/
 			- https://dev.to/techschoolguru/why-paseto-is-better-than-jwt-for-token-based-authentication-1b0c
 			- https://auth0.com/blog/id-token-access-token-what-is-the-difference/
