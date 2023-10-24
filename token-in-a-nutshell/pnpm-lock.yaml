@@ -17,6 +17,9 @@ dependencies:
   reveal.js:
     specifier: ^4.5.0
     version: 4.6.1
+  svelte-qrcode:
+    specifier: ^1.0.0
+    version: 1.0.0
 
 devDependencies:
   '@sveltejs/vite-plugin-svelte':
@@ -1862,6 +1865,10 @@ packages:
       svelte: 4.2.1
       typescript: 5.2.2
     dev: true
+
+  /svelte-qrcode@1.0.0:
+    resolution: {integrity: sha512-WrOvyyxtUzu32gVIDxcFMy0A7uUpbl/8yHaTNOsUaI8W5V4wa7AmReCjffhNY2aS42CqCLJ6qdwUoj/KxmeZzA==}
+    dev: false
 
   /svelte@4.2.1:
     resolution: {integrity: sha512-LpLqY2Jr7cRxkrTc796/AaaoMLF/1ax7cto8Ot76wrvKQhrPmZ0JgajiWPmg9mTSDqO16SSLiD17r9MsvAPTmw==}
