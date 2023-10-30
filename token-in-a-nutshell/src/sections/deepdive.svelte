@@ -330,20 +330,26 @@
 				<p class="text-xl">client</p>
 				<code class="text-sm mt-3">certificate</code>
 			</div>
-			<div class="w-1/2 relative flex justify-center items-center p-3">
-				<Communication dir=">"
-					title="attached client credential"
-					subtitle="finger print with the JWT payload"/>
+			<div class="w-1/2 relative flex flex-col justify-center items-center p-3">
+				<Step>
+					<Communication dir=">"
+						title="attached client credential"
+						subtitle="finger print with the JWT payload"/>
+				</Step>
 			</div>
 			<div class="w-1/4 rounded-xl bg-orange-400 font-mono p-5 h-full">
 				<p class="text-xl">server</p>
 				<code class="text-sm mt-3">certificate</code>
 			</div>
 		</div>
-	</Slide>
+			<Step>
+				<Code lang="json" class="mt-3 text-lg">{`{
+  "cnf": {
+    "x5t#S256": "nyJ-boWc-MUQgAe7c2Fpy23enSim5-eKaGgC8dHmYX4"
+  }
+}`}</Code>
+				</Step>
 		<Notes>Now underlying transport layer has been using 2 certificates</Notes>
-	<Slide animate>
-		<h2 class="font-mono text-3xl">DPoP</h2>
 	</Slide>
 	<Slide animate>
 		<h1 class="font-mono">sender constraint.</h1>
@@ -352,11 +358,16 @@
 	</Slide>
 	<Slide animate>
 		<h2 class="font-mono text-3xl">DPoP</h2>
+	</Slide>
+	<Slide animate>
+		<h2 class="font-mono text-3xl">DPoP</h2>
 		<Code lang="json">
 			{`
 			{
 				"alg": "RS256", // using async algorithms (public-private key pairs)
-				"kid": "f2e82732b971a135cf1416e8b46dae04d80894e7", // idp supports multiple keys
+				"jwk": {
+
+				},
 				"typ": "dpop+jwt"
 			}
 			`}
