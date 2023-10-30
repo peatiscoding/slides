@@ -1,12 +1,16 @@
 <script>
 
-	import { Slide } from "@components"
+	import { FitText, Slide } from "@components"
 	import QrCode from 'svelte-qrcode'
 
 	const slideUrl = 'token-in-a-nutshell.pages.dev'
 
 </script>
 <section>
+	<Slide class="font-serif">
+		<FitText>UNDERSTAND AND KNOW YOUR TOOLS</FitText>
+		<FitText>THIS IS THE WAY</FitText>
+	</Slide>
 	<Slide animate>
 		<h1 class="font-mono text-3xl p-5">thank you</h1>
 		<h2 class="font-mono text-2xl mt-3">talk. question & answer.</h2>
@@ -27,6 +31,7 @@
 			<li><a href="https://www.scottbrady91.com/jose/jwts-which-signing-algorithm-should-i-use" target="_blank">https://www.scottbrady91.com/jose/jwts-which-signing-algorithm-should-i-use</a></li>
 			<li><a href="https://paragonie.com/blog/2017/03/jwt-json-web-tokens-is-bad-standard-that-everyone-should-avoid" target="_blank">https://paragonie.com/blog/2017/03/jwt-json-web-tokens-is-bad-standard-that-everyone-should-avoid</a></li>
 			<li><a href="https://medium.com/mattr-global/jwm-a-new-standard-for-secure-messaging-a21d3daa4403" target="_blank">https://medium.com/mattr-global/jwm-a-new-standard-for-secure-messaging-a21d3daa4403</a></li>
+			<li><a href="https://cloudentity.com/developers/blog/mtls_vs_dpop/" target="_blank">https://cloudentity.com/developers/blog/mtls_vs_dpop/</a></li>
 		</ul>
 	</Slide>
 </section>

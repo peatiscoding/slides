@@ -1,7 +1,8 @@
 <script lang="ts">
 	import 'iconify-icon'
-	import { Code, Notes, Slide, Step } from "@components"
+	import { Code, FitText, Notes, Slide, Step } from "@components"
 	import Communication from '../components/communication.svelte'
+	import DPoP from '../../assets/dpop-1.svg?c'
 
 	type CommuStep = { dir: '<' | '>' | '.>' | '<.' | '<.>' | '><', title: string, subtitle: string } 
 
@@ -280,8 +281,9 @@
 	</Slide>
 	<Slide animate>
 		<h1 class="font-mono">sender constraint.</h1>
-		<h2 class="font-mono text-3xl mt-3">mTLS</h2>
+		<h2 class="font-mono text-3xl mt-5">mTLS</h2>
 		<p class="font-mono text-xl mt-2">Mutual Transport Layer Security</p>
+		<p class="font-mono underline text-lg mt-3">transport layer</p>
 	</Slide>
 	<Slide animate>
 		<h2 class="font-mono text-3xl">mTLS</h2>
@@ -331,65 +333,133 @@
 				<code class="text-sm mt-3">certificate</code>
 			</div>
 			<div class="w-1/2 relative flex flex-col justify-center items-center p-3">
-				<Step>
-					<Communication dir=">"
-						title="attached client credential"
-						subtitle="finger print with the JWT payload"/>
-				</Step>
+				<Communication dir=">"
+					title="attached client credential"
+					subtitle="finger print with the JWT payload"/>
 			</div>
 			<div class="w-1/4 rounded-xl bg-orange-400 font-mono p-5 h-full">
 				<p class="text-xl">server</p>
 				<code class="text-sm mt-3">certificate</code>
 			</div>
 		</div>
-			<Step>
-				<Code lang="json" class="mt-3 text-lg">{`{
-  "cnf": {
-    "x5t#S256": "nyJ-boWc-MUQgAe7c2Fpy23enSim5-eKaGgC8dHmYX4"
-  }
-}`}</Code>
-				</Step>
+		<div>
+			<pre class="mt-3 text-sm">
+				<code class="language-json text-sm" data-trim> 
+{`// example of confirmation within the AccessToken
+{
+	"cnf": {
+		"x5t#S256": "nyJ-boWc-MUQgAe7c2Fpy23enSim5-eKaGgC8dHmYX4"
+	}
+}`}
+				</code>
+			</pre>
+		</div>
 		<Notes>Now underlying transport layer has been using 2 certificates</Notes>
 	</Slide>
 	<Slide animate>
 		<h1 class="font-mono">sender constraint.</h1>
-		<h2 class="font-mono text-3xl mt-3">DPoP</h2>
+		<h2 class="font-mono text-3xl mt-5">DPoP</h2>
 		<p class="font-mono text-xl mt-2">Demonstration Proof of Possession</p>
+		<p class="font-mono underline text-lg mt-2">application layer</p>
+		<Notes>
+			this means it doesn't need PKI (Public Key Infrastructure to facilitate the validation.). It just relies on
+			our good old asymmetric cryptographic technique.
+		</Notes>
 	</Slide>
 	<Slide animate>
 		<h2 class="font-mono text-3xl">DPoP</h2>
-	</Slide>
-	<Slide animate>
-		<h2 class="font-mono text-3xl">DPoP</h2>
-		<Code lang="json">
-			{`
-			{
-				"alg": "RS256", // using async algorithms (public-private key pairs)
-				"jwk": {
-
-				},
-				"typ": "dpop+jwt"
-			}
-			`}
-		</Code>
+		<div class="flex">
+			<DPoP class="w-1/2"/>
+			<div class="w-1/2 relative">
+				<Step fadeInThenOut class="absolute inset-0 flex flex-col justify-center">
+					<pre>
+						<code class="language-json text-sm" data-line-numbers="4-8" data-trim> 
+							{`
+// DPoP header
+{
+	"alg": "PS256",
+	"jwk": {
+		"kty": "RSA",
+		"n": "ll7x-VAQlsnf4Td5xKsKGgQtDUZj5uG4Fh-mDODe5n6iz_a7Of4WWkUMWacx4JWtbnjzJ8MfWVMcYXgBky1XQB9IcQ7M7otT60cULLKqXAlhxX6AWSlTwfyvNeXOFc4kjzZwU6yvfv4HpPlhzOob3cImjSx4hAWSsDC3igzzHdODFrt3nW8KApQObqQpMFcSuQLu3SshrC9GLnRYs7gxcs9qvfXcgHkPCmcCgbV4VjwbTtw3OyPeHMlJ0AoHt_ZXS6gIiwzUKlCp6MKn0OIH8XMSp4foYYNlSPW7OE0iLca8AJew9DsjtjhATbO-pldTpmNpYqpdrS1v0G3Tzxevfw",
+		"e": "AQAB"
+	},
+	"typ": "dpop+jwt"
+}
+							`}
+						</code>
+					</pre>
+				</Step>
+				<Step fadeIn class="absolute inset-0 flex flex-col justify-center">
+					<pre>
+						<code class="language-json text-sm" data-line-numbers="|5" data-trim> 
+							{`
+// DPoP payload
+{
+	"htm": "POST",
+	"htu": "https://oauth2c.us.authz.cloudentity.io/oauth2c/demo/oauth2/token",
+	"jti": "31f8cfaa-2ed2-479a-b1ce-afe864b4a07e",
+	"iat": 1684313563
+}
+							`}
+						</code>
+					</pre>
+				</Step>
+				<Step fadeIn class="absolute inset-0 flex flex-col justify-center">
+					<pre>
+						<code class="language-json text-sm" data-line-numbers="|4|13" data-trim>{`// the access token 
+{
+  "cnf": {
+    "jkt": "RDweqX6qcVfPJYxuCw543HmetWz2RfjJGcOrEH9e3Hg"
+  }
+}
+// DPoP payload
+{
+  "htm": "GET",
+  "htu": "https://example.com/resource",
+  "jti": "afe864b4a07e-2ed2-b1ce-479a-31f8cfaa",
+  "iat": 1684314808
+  "ath": "7msSQlMTsPnQTiXfgyf804NTDYNUMcQ5wj88J2dFDN4"
+}`}
+						</code>
+					</pre>
+				</Step>
+			</div>
+		</div>
+		<p class="font-mono text-sm">
+			ref: <a href="https://cloudentity.com/developers/blog/mtls_vs_dpop/">https://cloudentity.com/developers/blog/mtls_vs_dpop/</a>
+		</p>
 		<Notes>
 			Example: "alg"; JWT was desgined so that it can handle dynamic of signing classes
 			hence "alg" also supports "none" value. This is completely valid JWT class and
 			it will went through if your code doesn't validate the supported algorithms.
+
+			<p>
+				- jti = JWT id
+				- cnf = confirmation
+			</p>
 		</Notes>
 	</Slide>
-	<Slide animate>
-		<h1 data-id="senderconst" class="font-mono text-4xl">sender constraints</h1>
-		<Step fadeDown class="font-mono text-2xl mt-10">another problem with token-based authentication</Step>
-		<Step fadeDown class="font-mono text-2xl mt-5">CASE: copy the token then paste it in the Authorization header in postman</Step>
-		<div class="grid grid-flow-row-dense grid-cols-2 mt-[50px]">
-			<Step fadeDown class="font-mono text-3xl rounded-xl bg-orange-500 m-3 p-4">MTLS</Step>
-			<Step fadeDown class="font-mono text-3xl rounded-xl bg-indigo-500 m-3 p-4">DPoP</Step>
+	<Slide animate class="font-mono">
+		<h1 class="text-3xl">sender constraint.</h1>
+		<div class="flex mt-3">
+			<div class="w-1/2 p-3">
+				<div class="flex flex-col">
+					<h1 class="text-2xl">mTLS</h1>
+					<code class="text-xl">Transport Layer</code>
+					<code class="text-xl">hard</code>
+					<code class="text-xl">smaller</code>
+					<p class="text-xl">no need to do anything else</p>
+				</div>
+			</div>
+			<div class="w-1/2 p-3">
+				<div class="flex flex-col justify-center">
+					<h1 class="text-2xl">DPoP</h1>
+					<code class="text-xl">Application Layer</code>
+					<code class="text-xl">easier</code>
+					<code class="text-xl">larger</code>
+					<p class="text-xl">need to generate DPoP on all requests</p>
+				</div>
+			</div>
 		</div>
-		<Notes>
-			<p>Copy the token paste it in the Auth header in postman</p>
-			- MTLS
-			- DPoP
-		</Notes>
 	</Slide>
 </section>
