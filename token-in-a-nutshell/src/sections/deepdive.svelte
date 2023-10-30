@@ -1,6 +1,66 @@
-<script>
+<script lang="ts">
+	import 'iconify-icon'
 	import { Code, Notes, Slide, Step } from "@components"
+	import Communication from '../components/communication.svelte'
 
+	type CommuStep = { dir: '<' | '>' | '.>' | '<.' | '<.>' | '><', title: string, subtitle: string } 
+
+	const tlsSteps: CommuStep[] = [
+		{
+			dir: '>', title: 'Client Hello', subtitle: 'TLS version + details',
+		},
+		{
+			dir: '<', title: 'Server Hello', subtitle: 'Supported TLS version + details',
+		},
+		{
+			dir: '<', title: 'Server Certificate', subtitle: '',
+		},
+		{
+			dir: '<.', title: 'Verify Certificate', subtitle: 'against CA',
+		},
+		{
+			dir: '>', title: 'Client send', subtitle: 'pre-master secret',
+		},
+		{
+			dir: '<.>', title: 'Both', subtitle: 'compute the secrets',
+		},
+		{
+			dir: '><', title: 'Success', subtitle: 'communication is now encrypyted',
+		},
+	]
+
+	const mtlsSteps: CommuStep[] = [
+		{
+			dir: '>', title: 'Client Hello', subtitle: 'TLS version + details',
+		},
+		{
+			dir: '<', title: 'Server Hello', subtitle: 'Supported TLS version + details',
+		},
+		{
+			dir: '<', title: 'Server Certificate', subtitle: '',
+		},
+		{
+			dir: '<.', title: 'Verify Certificate', subtitle: 'against CA',
+		},
+		{
+			dir: '<', title: 'Request Client Certificate', subtitle: '',
+		},
+		{
+			dir: '>', title: 'Client send certificate', subtitle: '',
+		},
+		{
+			dir: '.>', title: 'Verify Certificate', subtitle: 'against CA',
+		},
+		{
+			dir: '>', title: 'Client send key info', subtitle: 'pre-master secret',
+		},
+		{
+			dir: '<.>', title: 'Both', subtitle: 'compute the secrets',
+		},
+		{
+			dir: '><', title: 'Success', subtitle: 'communication is now encrypyted',
+		},
+	]
 </script>
 <section>
 	<Slide animate>
@@ -213,6 +273,93 @@
 		<Notes>
 			<p>We won't go into deeper details with this library as it has a lot more details.</p>
 			<p>However let's highlight the key-differences. Unlike JWT, content of the pasteo are always encrypted. The key important is the encryption suite is never been the choices for Developer. It creates the lesser flexibility however promote the security.</p>
+		</Notes>
+	</Slide>
+	<Slide animate>
+		<h1 class="font-mono">sender constraint.</h1>
+	</Slide>
+	<Slide animate>
+		<h1 class="font-mono">sender constraint.</h1>
+		<h2 class="font-mono text-3xl mt-3">mTLS</h2>
+		<p class="font-mono text-xl mt-2">Mutual Transport Layer Security</p>
+	</Slide>
+	<Slide animate>
+		<h2 class="font-mono text-3xl">mTLS</h2>
+		<Step fadeIn><h2 class="font-mono text-3xl">TLS</h2></Step>
+	</Slide>
+	<Slide animate>
+		<h2 class="font-mono text-3xl">TLS</h2>
+		<div class="flex mt-3">
+			<div class="w-1/4 rounded-xl bg-indigo-500 font-mono p-5 h-full">
+				<p class="text-xl">client</p>
+			</div>
+			<div class="w-1/2 relative m-3">
+				{#each tlsSteps as step}
+					<Step fadeInThenOut class="absolute inset-0">
+						<Communication dir={step.dir} title={step.title} subtitle={step.subtitle} />
+					</Step>
+				{/each}
+			</div>
+			<div class="w-1/4 rounded-xl bg-orange-400 font-mono p-5 h-full">
+				<p class="text-xl">server</p>
+			</div>
+		</div>
+	</Slide>
+	<Slide animate>
+		<h2 class="font-mono text-3xl">mTLS</h2>
+		<div class="flex mt-3">
+			<div class="w-1/4 rounded-xl bg-indigo-500 font-mono p-5 h-full">
+				<p class="text-xl">client</p>
+			</div>
+			<div class="w-1/2 relative m-3">
+				{#each mtlsSteps as step}
+					<Step fadeInThenOut class="absolute inset-0">
+						<Communication dir={step.dir} title={step.title} subtitle={step.subtitle} />
+					</Step>
+				{/each}
+			</div>
+			<div class="w-1/4 rounded-xl bg-orange-400 font-mono p-5 h-full">
+				<p class="text-xl">server</p>
+			</div>
+		</div>
+	</Slide>
+	<Slide animate>
+		<h2 class="font-mono text-3xl">mTLS</h2>
+		<div class="flex mt-3">
+			<div class="w-1/4 rounded-xl bg-indigo-500 font-mono p-5 h-full">
+				<p class="text-xl">client</p>
+			</div>
+			<div class="w-1/2">
+			</div>
+			<div class="w-1/4 rounded-xl bg-orange-400 font-mono p-5 h-full">
+				<p class="text-xl">server</p>
+			</div>
+		</div>
+	</Slide>
+		<Notes>Now underlying transport layer has been using 2 certificates</Notes>
+	<Slide animate>
+		<h2 class="font-mono text-3xl">DPoP</h2>
+	</Slide>
+	<Slide animate>
+		<h1 class="font-mono">sender constraint.</h1>
+		<h2 class="font-mono text-3xl mt-3">DPoP</h2>
+		<p class="font-mono text-xl mt-2">Demonstration Proof of Possession</p>
+	</Slide>
+	<Slide animate>
+		<h2 class="font-mono text-3xl">DPoP</h2>
+		<Code lang="json">
+			{`
+			{
+				"alg": "RS256", // using async algorithms (public-private key pairs)
+				"kid": "f2e82732b971a135cf1416e8b46dae04d80894e7", // idp supports multiple keys
+				"typ": "dpop+jwt"
+			}
+			`}
+		</Code>
+		<Notes>
+			Example: "alg"; JWT was desgined so that it can handle dynamic of signing classes
+			hence "alg" also supports "none" value. This is completely valid JWT class and
+			it will went through if your code doesn't validate the supported algorithms.
 		</Notes>
 	</Slide>
 	<Slide animate>
