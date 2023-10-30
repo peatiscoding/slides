@@ -328,11 +328,16 @@
 		<div class="flex mt-3">
 			<div class="w-1/4 rounded-xl bg-indigo-500 font-mono p-5 h-full">
 				<p class="text-xl">client</p>
+				<code class="text-sm mt-3">certificate</code>
 			</div>
-			<div class="w-1/2">
+			<div class="w-1/2 relative flex justify-center items-center p-3">
+				<Communication dir=">"
+					title="attached client credential"
+					subtitle="finger print with the JWT payload"/>
 			</div>
 			<div class="w-1/4 rounded-xl bg-orange-400 font-mono p-5 h-full">
 				<p class="text-xl">server</p>
+				<code class="text-sm mt-3">certificate</code>
 			</div>
 		</div>
 	</Slide>
