@@ -20,7 +20,7 @@
 			dir: '<.', title: 'Verify Certificate', subtitle: 'against CA',
 		},
 		{
-			dir: '>', title: 'Client send', subtitle: 'pre-master secret',
+			dir: '>', title: 'Client sends', subtitle: 'pre-master secret',
 		},
 		{
 			dir: '<.>', title: 'Both', subtitle: 'compute the secrets',
@@ -44,16 +44,16 @@
 			dir: '<.', title: 'Verify Certificate', subtitle: 'against CA',
 		},
 		{
-			dir: '<', title: 'Request Client Certificate', subtitle: '',
+			dir: '<', title: 'Request client certificate', subtitle: '',
 		},
 		{
-			dir: '>', title: 'Client send certificate', subtitle: '',
+			dir: '>', title: 'Client sends certificate', subtitle: '',
 		},
 		{
 			dir: '.>', title: 'Verify Certificate', subtitle: 'against CA',
 		},
 		{
-			dir: '>', title: 'Client send key info', subtitle: 'pre-master secret',
+			dir: '>', title: 'Client sends key info', subtitle: 'pre-master secret',
 		},
 		{
 			dir: '<.>', title: 'Both', subtitle: 'compute the secrets',
@@ -307,7 +307,7 @@
 			</div>
 		</div>
 	</Slide>
-	<Slide animate>
+	<Slide>
 		<h2 class="font-mono text-3xl">mTLS</h2>
 		<div class="flex mt-3">
 			<div class="w-1/4 rounded-xl bg-indigo-500 font-mono p-5 h-full">
@@ -325,7 +325,7 @@
 			</div>
 		</div>
 	</Slide>
-	<Slide animate>
+	<Slide>
 		<h2 class="font-mono text-3xl">mTLS</h2>
 		<div class="flex mt-3">
 			<div class="w-1/4 rounded-xl bg-indigo-500 font-mono p-5 h-full">
@@ -356,7 +356,7 @@
 		</div>
 		<Notes>Now underlying transport layer has been using 2 certificates</Notes>
 	</Slide>
-	<Slide animate>
+	<Slide>
 		<h1 class="font-mono">sender constraint.</h1>
 		<h2 class="font-mono text-3xl mt-5">DPoP</h2>
 		<p class="font-mono text-xl mt-2">Demonstration Proof of Possession</p>
@@ -368,8 +368,17 @@
 	</Slide>
 	<Slide animate>
 		<h2 class="font-mono text-3xl">DPoP</h2>
+		<div class="flex justify-center">
+			<DPoP id="dpop-dgram" class="w-1/2"/>
+		</div>
+		<p class="font-mono text-sm">
+			ref: <a href="https://cloudentity.com/developers/blog/mtls_vs_dpop/">https://cloudentity.com/developers/blog/mtls_vs_dpop/</a>
+		</p>
+	</Slide>
+	<Slide animate>
+		<h2 class="font-mono text-3xl">DPoP</h2>
 		<div class="flex">
-			<DPoP class="w-1/2"/>
+			<DPoP id="dpop-dgram" class="w-1/2"/>
 			<div class="w-1/2 relative">
 				<Step fadeInThenOut class="absolute inset-0 flex flex-col justify-center">
 					<pre>
@@ -389,7 +398,7 @@
 						</code>
 					</pre>
 				</Step>
-				<Step fadeIn class="absolute inset-0 flex flex-col justify-center">
+				<Step fadeInThenOut class="absolute inset-0 flex flex-col justify-center">
 					<pre>
 						<code class="language-json text-sm" data-line-numbers="|5" data-trim> 
 							{`
@@ -447,7 +456,7 @@
 					<h1 class="text-2xl">mTLS</h1>
 					<code class="text-xl">Transport Layer</code>
 					<code class="text-xl">hard</code>
-					<code class="text-xl">smaller</code>
+					<code class="text-xl">small</code>
 					<p class="text-xl">no need to do anything else</p>
 				</div>
 			</div>
@@ -455,8 +464,8 @@
 				<div class="flex flex-col justify-center">
 					<h1 class="text-2xl">DPoP</h1>
 					<code class="text-xl">Application Layer</code>
-					<code class="text-xl">easier</code>
-					<code class="text-xl">larger</code>
+					<code class="text-xl">easy</code>
+					<code class="text-xl">large</code>
 					<p class="text-xl">need to generate DPoP on all requests</p>
 				</div>
 			</div>

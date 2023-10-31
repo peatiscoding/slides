@@ -7,10 +7,10 @@
 
 <section>
 	<Slide animate>
-		<h1 class="font-mono text-4xl mb-5">classification. type of tokens.</h1>
+		<h1 class="font-mono text-4xl mb-5">classification. types of token.</h1>
 	</Slide>
 	<Slide animate>
-		<h1 class="font-mono text-4xl mb-5">classification. type of tokens.</h1>
+		<h1 class="font-mono text-4xl mb-5">classification. types of token.</h1>
 		<div class="flex justify-center items-center">
 			<p class="font-mono text-3xl p-5">by responsibility<br/><span class="text-xl">(function)</span></p>
 		</div>
@@ -106,7 +106,7 @@
 					<iconify-icon icon="ri:arrow-down-line" class="mt-3" style="color: #ccc;" />
 					<code class="font-mono text-2xl m-2">id_token</code>
 				</Step>
-				<Step fadeDown order="7" class="font-mono text-xl mt-[25px]">has identity</Step>
+				<Step fadeDown order="7" class="font-mono text-xl mt-[25px]">contains identity</Step>
 			</div>
 			<div class="w-[70px]"></div>
 			<div class="flex flex-col justify-center items-center bg-orange-500 rounded-xl p-8">
@@ -117,7 +117,7 @@
 					<iconify-icon icon="ri:arrow-down-line" class="mt-3" style="color: #ccc;" />
 					<code class="font-mono text-2xl m-2">access_token</code>
 				</Step>
-				<Step fadeDown order="8" class="font-mono text-xl mt-[25px]">has scope</Step>
+				<Step fadeDown order="8" class="font-mono text-xl mt-[25px]">contains scope</Step>
 			</div>
 		</div>
 	</Slide>
@@ -127,7 +127,7 @@
 			represents <span class="underline"
 				>the validity of the bearer</span
 			>
-			to hold such: <code>access_token + id_token</code>
+			to hold: <code>access_token + id_token</code>
 		</Step>
 	</Slide>
 	<!-- Let's see its nature (opaque token; stateless token) -->
@@ -192,7 +192,7 @@
 		</Notes>
 	</Slide>
 	<Slide animate>
-		<h1 class="font-mono text-3xl mb-5">Comparison</h1>
+		<h1 class="font-mono text-3xl mb-5">comparison</h1>
 		<table class="font-mono text-2xl table-auto">
 			<thead>
 				<tr>
@@ -235,7 +235,7 @@
 	</Slide>
 	<Slide>
 		<p class="font-mono text-xl">
-			These 2 concepts are not always binary; in system designs this philosophy of stateful and stateless can be leveraged in many places.
+			These 2 concepts are not always binary; in system design this philosophy of stateful and stateless can be leveraged in many places.
 		</p>
 		<Notes>
 			Now here is the key takeaway!

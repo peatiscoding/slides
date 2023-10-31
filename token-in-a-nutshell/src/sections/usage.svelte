@@ -38,7 +38,7 @@
 	<Slide animate>
 		<h1 data-id="pitfall-1" class="font-mono">common pitfall #2</h1>
 		<p class="font-mono mt-5 text-2xl">
-			here is how it is intended to be used.
+			here is how it should be used.
 		</p>
 			<Pitfall_2_3 />
 	</Slide>
